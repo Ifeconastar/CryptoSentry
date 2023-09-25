@@ -1,0 +1,231 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Center the header content vertically and horizontally */
+header {
+    text-align: center;
+    padding: 30px 0; /* Adjusted padding for smaller screens */
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Add hover styles to links in header */
+header a {
+    color: #fff; /* Default text color */
+    text-decoration: none;
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+header a:hover {
+    color: #0056b3; /* Change text color on hover */
+}
+
+/* Center the form and table vertically and horizontally */
+main {
+    text-align: center;
+    padding: 30px 0; /* Adjusted padding for smaller screens */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Add Asset Form */
+.add-asset {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem; /* Adjusted padding for smaller screens */
+    margin: 0 auto 1rem;
+    max-width: 400px;
+}
+
+.add-asset h2 {
+    margin-bottom: 1rem;
+    font-size: 18px; /* Adjusted font size for smaller screens */
+}
+
+.add-asset label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 14px; /* Adjusted font size for smaller screens */
+}
+
+.add-asset input[type="text"],
+.add-asset input[type="number"] {
+    width: 100%;
+    padding: 0.3rem; /* Adjusted padding for smaller screens */
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px; /* Adjusted font size for smaller screens */
+}
+
+.add-asset button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px; /* Adjusted font size for smaller screens */
+}
+
+/* Portfolio Table */
+.portfolio {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem; /* Adjusted padding for smaller screens */
+    margin: 0 auto 1rem;
+    max-width: 1200px;
+}
+
+.portfolio h2 {
+    margin-bottom: 1rem;
+    font-size: 18px; /* Adjusted font size for smaller screens */
+}
+
+.portfolio table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.portfolio th, .portfolio td {
+    border: 1px solid #ccc;
+    padding: 0.3rem; /* Adjusted padding for smaller screens */
+    text-align: left;
+    font-size: 14px; /* Adjusted font size for smaller screens */
+}
+
+.portfolio th {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.portfolio tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.portfolio button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.2rem 0.4rem; /* Adjusted padding for smaller screens */
+    cursor: pointer;
+    font-size: 14px; /* Adjusted font size for smaller screens */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0; /* Adjusted padding for smaller screens */
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Individual media query for screen size 375px */
+@media (min-width: 375px) and (max-width: 375px) {
+    /* Header styles */
+    header {
+        padding: 20px 0;		/* Adjusted header padding for 375px width */
+		font-size: 12px;
+    }
+
+    /* Add Asset Form styles */
+    .add-asset {
+        max-width: 200px; /* Adjusted max-width for the form */
+    }
+
+    .add-asset h2 {
+        font-size: 14px; /* Adjusted font size for the form heading */
+    }
+
+    .add-asset label {
+        font-size: 12px; /* Adjusted font size for form labels */
+    }
+	
+	
+	#symbol {
+		font-size: 10px;
+	}
+     
+    .add-asset input[type="text"],
+    .add-asset input[type="number"] {
+        font-size: 10px; /* Adjusted font size for form inputs */
+    }
+
+    .add-asset button[type="submit"] {
+        font-size: 10px; /* Adjusted font size for the form button */
+    }
+
+    /* Portfolio Table styles */
+    .portfolio {
+        padding: 0.5rem; /* Adjusted padding for the table */
+        max-width: 70%; /* Adjusted max-width for the table */
+    }
+     
+	#portfolio-table {
+        width: 80%; /* Increase the width to make the chart larger */
+        margin: 0 auto; /* Center the chart horizontally */
+	}	
+	 
+    .portfolio h2 {
+        font-size: 13px; /* Adjusted font size for the table heading */
+    }
+
+    .portfolio table {
+        margin-top: 10px; /* Adjusted margin-top for the table */
+    }
+
+    .portfolio th, .portfolio td {
+        padding: 0.2rem; /* Adjusted padding for table cells */
+        font-size: 8px; /* Adjusted font size for table cells */
+    }
+    
+    .portfolio button {
+        font-size: 12px; /* Adjusted font size for table buttons */
+    }
+
+    /* Dropdown and Price Chart */
+    select#asset {
+        font-size: 10px; /* Adjusted font size for the dropdown */
+    }
+	
+	#net-worth {
+		font-size: 10px;
+	}
+    
+	.crypto-price-chart h2 {
+		font-size: 14px;
+    }
+	.crypto-price-chart label {
+		font-size: 12px;
+    }
+
+    #price-chart {
+        width: 70%; /* Increase the width to make the chart larger */
+        margin: 0 auto; /* Center the chart horizontally */
+	}
+
+    /* Footer styles */
+    footer {
+        padding: 10px 0; /* Adjusted padding for the footer */
+		font-size: 12px;
+    }
+}
+
+

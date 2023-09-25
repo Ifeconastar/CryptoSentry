@@ -1,0 +1,91 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Style the header and footer */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Style the content section */
+.content {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headings */
+h1, h2 {
+    color: #333;
+}
+
+/* Style paragraphs */
+p {
+    margin-bottom: 20px;
+}
+
+/* Style lists */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+    .content {
+        padding: 20px;
+    }
+    ul {
+        margin-left: 10px;
+    }
+    footer {
+        padding: 10px 0;
+    }
+}
+/* CSS in your about_us_styles.css file */
+header {
+    text-align: center;
+    padding: 20px 0; /* You can adjust the padding as needed */
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Style the links in the header */
+header a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px; /* Add some spacing between the links */
+    transition: text-decoration 0.3s; /* Add a transition for the hover effect */
+}
+
+/* Apply the hover effect */
+a:hover {
+    background-color: #0056b3;
+}
+

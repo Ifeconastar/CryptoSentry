@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Management - CryptoSentry</title>
+    <link rel="stylesheet" href="css/portfolio_styles.css"> <!-- Link to the portfolio management page CSS -->
+	<link rel="stylesheet" href="css/modal_styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <header>
+	<img src="https://drive.google.com/uc?id=12Fht96CfvtwbRdwy3JBUY7gyYty2c7Vs">
+	
+	<div>
+        <h1>CryptoSentry Portfolio Management</h1>
+        <p>Welcome, [User Name]!</p> <!-- Replace with the user's name -->
+        <a href="landing.html">Logout</a> <!-- Link to logout user -->
+		<a href="exchange.html">Exchanges</a> <!-- Link to exchanges -->
+		<a href="about_us.html">About Us</a> <!-- Link to the about_us page -->
+		<a href="learning_hub.html">Learning Hub</a> <!-- Link to the learning hub page -->
+	</div>	
+    </header>
+
+    <main>
+        
+       <section class="add-asset">
+           <h2>Add Cryptocurrency Asset</h2>
+           <form action="#" method="post" onsubmit="addAsset(event); return false;">
+               <label for="asset">Asset:</label>
+               <select id="asset" name="asset" required>
+                <!-- Populate options dynamically using JavaScript -->
+               </select>
+
+               <label for="symbol">Symbol:</label>
+               <select id="symbol" name="symbol" required>
+                <!-- Populate options dynamically using JavaScript -->
+               </select>
+                
+			   <label for="purchase-price">Purchase Price (USD):</label>
+               <input type="text" id="purchase-price" name="purchase-price" required>
+
+               <label for="quantity">Quantity:</label>
+               <input type="text" id="quantity" name="quantity" required>
+			   
+			   <label for="total-value">Total Value (USD):</label>
+               <input type="number" id="total-value" name="total-value" readonly>
+
+               <button type="submit">Add Asset</button>
+                <!-- this button triggers the addition -->
+            </form>
+       </section>
+
+        <section class="portfolio">
+            <h2>Your Cryptocurrency Portfolio</h2>
+            <table id="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>Quantity</th>
+                        <th>Purchase Price (USD)</th>
+                        <th>Total Value (USD)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamically populate the table rows with user's cryptocurrency assets -->
+                    <!-- Use server-side scripting (e.g., PHP, Python) to fetch and display data here -->
+					
+                </tbody>
+            </table>
+            <div id="net-worth">Net Worth: $0.00</div>
+
+        </section>
+		
+
+		<section class="crypto-price-chart">
+            <h2>Cryptocurrency Price Chart</h2>
+			<div id="price-chart"></div>
+			  <label for="asset-select">Select Asset:</label>
+              <select id="asset-select">
+            <!-- Populate options dynamically using JavaScript -->
+            </select>
+
+		</section>
+    </main>
+    <footer>
+	<div>
+	<img src="https://drive.google.com/uc?id=12Fht96CfvtwbRdwy3JBUY7gyYty2c7Vs">
+	</div>
+	<div class="social-icons">
+    <a href="https://www.linkedin.com/in/ifeanyichukwu-izuegbu-4b5362104/" target="_blank" rel="noopener">
+    <i class="fab fa-linkedin"></i>
+    </a>
+
+     <a href="https://twitter.com/Ifeconastar_" target="_blank" rel="noopener">
+    <i class="fab fa-twitter"></i>
+    </a>
+	<a href="https://instagram.com/star_devop" target="_blank" rel="noopener">
+    <i class="fab fa-instagram"></i>
+    </a>
+	<a href="http://youtube.com/@ifeanyiizuegbu" target="_blank" rel="noopener">
+    <i class="fab fa-youtube"></i>
+    </a>
+    </div>
+        <p>&copy; 2023 CryptoSentry. All rights reserved.</p>
+    </footer>
+	<script src="js/portfolio.js"></script>
+    <script src="js/portfolio_price_chart_test.js"></script>
+
+	
+    <!-- Edit Asset Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Edit Asset</h2>
+            <form id="edit-form" onsubmit="saveEditedAsset(); return false;">
+                <label for="edit-name">Name:</label>
+                <input type="text" id="edit-name" name="edit-name" disabled>
+
+                <label for="edit-symbol">Symbol:</label>
+                <input type="text" id="edit-symbol" name="edit-symbol" disabled>
+
+                <label for="edit-quantity">Quantity:</label>
+                <input type="text" id="edit-quantity" name="edit-quantity" required>
+
+                <label for="edit-purchase-price">Purchase Price (USD):</label>
+                <input type="text" id="edit-purchase-price" name="edit-purchase-price" required>
+
+                <label for="edit-total-value">Total Value (USD):</label>
+                <input type="text" id="edit-total-value" name="edit-total-value" readonly>
+
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+</body>
+</html>
+
+

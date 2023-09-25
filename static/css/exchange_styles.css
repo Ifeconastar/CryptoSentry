@@ -1,0 +1,183 @@
+/* Reset some default styles */
+body, h2, p, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Style the header and footer */
+header, footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Apply some basic styling to the exchanges section */
+.exchanges {
+    background-color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the exchanges table */
+.exchanges table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style the table header */
+.exchanges th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style table rows alternately for better readability */
+.exchanges tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style table cells */
+.exchanges td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style links in the Exchange Website column */
+.exchanges td:last-child {
+    text-align: center;
+}
+
+/* Style links as buttons */
+.exchanges a.button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Change button color on hover */
+.exchanges a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 280px) {
+    header, footer {
+        padding: 10px 0; /* Adjust padding to extend to the right */
+    }
+
+    .exchanges {
+        padding: 10px;
+    }
+
+    .exchanges table {
+        margin-top: 10px;
+    }
+
+    .exchanges th, .exchanges td {
+        padding: 8px;
+    }
+	/* Reduce the font size for table headers and data on small screens */
+    .exchanges table th,
+    .exchanges table td {
+        font-size: 5px; /* Reduce the font size further */
+		padding: 4px
+    }
+}
+
+/* Add this to your existing CSS styles */
+a {
+    display: inline-block;
+    padding: 10px 20x;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 375px) {
+    header, footer {
+        padding: 10px 0;
+    }
+
+    .exchanges {
+        padding: 10px;
+    }
+
+    .exchanges table {
+        margin-top: 10px;
+    }
+
+    .exchanges th, .exchanges td {
+        padding: 8px;
+    }
+	/* Reduce the font size for table headers and data on small screens */
+    .exchanges table th,
+    .exchanges table td {
+        font-size: 7px; /* Reduce the font size further */
+        padding: 4px; /* Adjust the padding as needed */
+    }
+}
+@media (max-width: 414px) {
+    header, footer {
+        padding: 10px 0;
+    }
+
+    .exchanges {
+        padding: 10px;
+    }
+
+    .exchanges table {
+        margin-top: 10px;
+    }
+
+    .exchanges th, .exchanges td {
+        padding: 8px;
+    }
+	/* Reduce the font size for table headers and data on small screens */
+    .exchanges table th,
+    .exchanges table td {
+        font-size: 7px; /* Reduce the font size further */
+        padding: 4px; /* Adjust the padding as needed */
+    }
+}
+@media (min-width: 540px) and (max-width: 540px) {
+    header, footer {
+        padding: 10px 0;
+    }
+
+    .exchanges {
+        padding: 10px;
+    }
+
+    .exchanges table {
+        margin-top: 10px;
+    }
+
+    .exchanges th, .exchanges td {
+        padding: 8px;
+    }
+	/* Reduce the font size for table headers and data on small screens */
+    .exchanges table th,
+    .exchanges table td {
+        font-size: 7px; /* Reduce the font size further */
+        padding: 4px; /* Adjust the padding as needed */
+    }
+}
