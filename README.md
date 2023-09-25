@@ -21,7 +21,7 @@ This project is dedicated to providing cryptocurrency enthusiasts with valuable 
 
 ## Getting Started
 
-To get started with the CryptoSentry Learning Hub, simply visit our website [insert-website-url-here] and explore our wide range of educational resources and tools. Registration may be required for certain features.
+To get started with the CryptoSentry Learning Hub, simply visit our website and explore our wide range of educational resources and tools. Registration may be required for certain features.
 
 ## Usage
 
