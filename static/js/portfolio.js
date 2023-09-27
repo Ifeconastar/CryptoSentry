@@ -122,7 +122,7 @@ function checkTable() {
     let totalValue = 0;
 
     rows.forEach((row) => {
-        const totalValueCell = row.cells[4]; // Assuming the total value is in the 4th cell
+        const totalValueCell = row.cells[5]; // Assuming the total value is in the 4th cell
         const rowValue = parseFloat(totalValueCell.textContent.replace('$', '').replace(',', '')) || 0; // Get the numeric value
 
         console.log('Row Value:', rowValue);
@@ -149,7 +149,7 @@ function checkTable() {
 // Call the checkTable() function to initially display the Net Worth
 checkTable();
 
-
+let serialNumber = 1; // Initialize the serial number
 
 // Function to add a new row to the portfolio table
 function addAsset(event) {
@@ -174,12 +174,14 @@ function addAsset(event) {
 	
 	// Create a new table row and populate it with the selected data
 	const newRow = tbody.insertRow();
-    const nameCell = newRow.insertCell(0);
-    const symbolCell = newRow.insertCell(1);
-    const quantityCell = newRow.insertCell(2);
-    const priceCell = newRow.insertCell(3);
-    const totalValueCell = newRow.insertCell(4);
+	const idCell = newRow.insertCell(0);
+    const nameCell = newRow.insertCell(1);
+    const symbolCell = newRow.insertCell(2);
+    const quantityCell = newRow.insertCell(3);
+    const priceCell = newRow.insertCell(4);
+    const totalValueCell = newRow.insertCell(5);
 	
+	idCell.textContent = serialNumber;
 	nameCell.textContent = selectedAssetName;
     symbolCell.textContent = selectedAssetSymbol;
     quantityCell.textContent = selectedQuantity;
@@ -190,13 +192,16 @@ function addAsset(event) {
     newRow.classList.add('selected');
 
     // Add an "Edit" and "Remove" button to the new row (similar to the example row)
-    const actionCell = newRow.insertCell(5);
+    const actionCell = newRow.insertCell(6);
     actionCell.innerHTML = '<button onclick="editAsset(this)">Edit</button>' +
-                            '<button onclick="removeAsset()">Remove</button>';
+                            '<button onclick="removeAsset(this)">Remove</button>';
 
     
 	// Call the checkTable() function after adding assets
 	checkTable();
+	
+	// Increment the serial number for the next row
+    serialNumber++;
 	
 	// Clear form inputs after adding the row
     quantityInput.value = '';
@@ -207,16 +212,17 @@ function addAsset(event) {
 	
 }
 
-function removeAsset() {
-    const portfolioTable = document.getElementById('portfolio-table');
-    const selectedRow = document.querySelector('.selected'); // I added a 'selected' class to the row I want to remove
+function removeAsset(button) {
+    // Navigate to the parent row of the clicked button
+    const selectedRow = button.closest('tr');
 
     if (selectedRow) {
-        portfolioTable.deleteRow(selectedRow.rowIndex);
+        selectedRow.remove();
     }
-	
-	checkTable();
+
+    checkTable();
 }
+
 
 
 // ...
@@ -241,10 +247,10 @@ async function editAsset(button) {
     editModal.style.display = 'block';
 
     // Retrieve the asset's data from the selected row
-    const name = row.cells[0].textContent;
-    const symbol = row.cells[1].textContent;
-    const quantity = row.cells[2].textContent;
-    const purchasePrice = row.cells[3].textContent;
+    const name = row.cells[1].textContent;
+    const symbol = row.cells[2].textContent;
+    const quantity = row.cells[3].textContent;
+    const purchasePrice = row.cells[4].textContent;
 
     // Fill the edit form with the asset's data
     document.getElementById('edit-name').value = name;
@@ -336,11 +342,11 @@ function saveEditedAsset() {
     // Ensure that you have the correct row passed as a parameter
     if (editedRow) {
         // Update the edited row in the table
-        editedRow.cells[0].textContent = editedName;
-        editedRow.cells[1].textContent = editedSymbol;
-        editedRow.cells[2].textContent = editedQuantity;
-        editedRow.cells[3].textContent = editedpurchasePriceInput;
-        editedRow.cells[4].textContent = editedtotalValueInput;
+        editedRow.cells[1].textContent = editedName;
+        editedRow.cells[2].textContent = editedSymbol;
+        editedRow.cells[3].textContent = editedQuantity;
+        editedRow.cells[4].textContent = editedpurchasePriceInput;
+        editedRow.cells[5].textContent = editedtotalValueInput;
 
         // Hide the edit modal/form
         closeEditModal();
