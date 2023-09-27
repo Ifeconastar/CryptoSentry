@@ -6,11 +6,11 @@ from pymongo.errors import DuplicateKeyError
 from pymongo import MongoClient
 from flask_user import UserMixin
 import uuid
-
+from decouple import config
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/cryptoSentry'
-app.config['SECRET_KEY'] = '2c89a8aa7a80d75e317f0f0145eaf37a'
+app.config['SECRET_KEY'] = config('SECRET_KEY')
 mongo = PyMongo(app)
 bcrypt = Bcrypt(app)
 
